@@ -1,5 +1,4 @@
 @charset "utf8";
-
 /* NOTE: General Page Styles */
 html{
     box-sizing: border-box;
@@ -8,25 +7,43 @@ html{
 }
 body{
     box-sizing: border-box;
-    width: 95%;
+    width: 100%;
     height: 100%;
     background-color: rgba(20, 100, 165, 0.9);
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 15px;
+    padding-right: 15px;
 }
-
+article.content{
+    padding-left: 15px;
+}
+article.content#box1{
+    padding-top: 50px;
+}
 /* NOTE: Main Nav Styles */
-
+/* header{
+    padding: 0px 0px;
+    margin: 0px 0px;
+} */
+nav.horizontal#main ul{
+    width: 100%;
+    margin-top: 0px;
+}
 nav.horizontal#main li{
+    box-sizing: border-box;
     list-style-type: none;
-    /* border-right-style: solid;
+    border-right-style: solid;
     border-right-width: 2px;
-    border-right-color: #119ab3; */
-    /* padding-right: 4px; */
+    border-right-color: #119ab3;
     margin-left: auto;
     margin-right: auto;
 }
+/* nav.horizontal#main li:last-of-type{
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-right-color: #1fb6d1;
+    padding-right: 2px;
+} */
 nav.horizontal#main li.mainitems{
     border-right-style: solid;
     border-right-width: 2px;
@@ -42,7 +59,6 @@ nav.horizontal#main li a{
 nav.horizontal#main ul{
     box-sizing: border-box;
     position: fixed;
-    width: 92%;
     background-color: #1fb6d1;
     padding: 0px 4px;
     display: flex;
