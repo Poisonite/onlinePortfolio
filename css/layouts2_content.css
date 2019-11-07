@@ -1,0 +1,39 @@
+@charset "utf8";
+/*-------------------------------------------------------------------
+---------------------------All Devices-------------------------------
+-------------------------------------------------------------------*/
+/* NOTE: General Layout Styles */
+html{
+    box-sizing: border-box;
+    width: 100%;
+}
+body{
+    box-sizing: border-box;
+    width: 100%;
+}
+/* NOTE: General Nav Main Layout Styles */
+nav.horizontal#main ul{
+    display: flex;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+}
+nav.horizontal#main li{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 300px;
+}
+nav.horizontal#main li a{
+    width: 100%;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------
+----------------------------Mobile Devices---------------------------
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+------------------------Desktop/Tablet Devices-----------------------
+-------------------------------------------------------------------*/
