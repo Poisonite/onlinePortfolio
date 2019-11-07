@@ -6,11 +6,8 @@ html{
 body{
     background-color: rgba(20, 100, 165, 0.9);
 }
-article.content{
-    padding-left: 15px;
-}
-article.content#box1{
-    padding-top: 50px;
+article.content:nth-of-type(1n+0){
+    margin-top: 75px;
 }
 /* NOTE: Main Nav Styles */
 nav.horizontal#main ul{
@@ -45,4 +42,16 @@ nav.horizontal#main li:hover, nav.horizontal#main li:active{
     border-bottom-style: solid;
     border-bottom-width: 6px;
     border-bottom-color: #119ab3;
+}
+/* NOTE: Article Content Box Styles */
+article.content{
+    background-color: rgba(15, 61, 99, 0.9);
+    border-radius: 50px 50px;
+    margin: 15px 15px;
+    padding: 10px 10px;
+}
+article.content h2, article.content h3, 
+article.content h4, article.content p{
+    margin: 15px 15px;
+    color: rgb(194, 194, 194);
 }

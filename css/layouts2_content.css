@@ -27,6 +27,23 @@ nav.horizontal#main li a{
     width: 100%;
     text-align: center;
 }
+/* NOTE: Article Content Box Layout Styles */
+
+body, article.content{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 430px;
+}
+article.content{
+    box-sizing: border-box;
+    width: 80%;
+    /* height: 80%; */
+}
+article.content h2, article.content h3, 
+article.content h4, article.content p{
+    box-sizing: border-box;
+    width: 100%;
+}
 
 /*-------------------------------------------------------------------
 ----------------------------Mobile Devices---------------------------
