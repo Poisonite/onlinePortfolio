@@ -102,12 +102,16 @@ div.articleContainer article.content h4, div.articleContainer article.content p{
         font-size: 1em;
         max-height: 2.4em;
     }
-    footer a{
+    footer a:link, footer a:active{
         text-decoration: none;
         color: rgb(226, 226, 226);
         background-color: #73eaff;
         border-radius: 30px;
         padding: 5px;
+    }
+    footer a:hover, footer a:active{
+        color: rgba(226, 226, 226, 0.8);
+        background-color: #73eaffd2;
     }
 }
 
@@ -121,11 +125,15 @@ div.articleContainer article.content h4, div.articleContainer article.content p{
         display: none;
     }
     /* NOTE: Footer Styles */
-    footer a{
+    footer a:link, footer a:active{
         text-decoration: none;
         color: rgb(226, 226, 226);
         background-color: #73eaff;
         border-radius: 30px;
         padding: 10px;
+    }
+    footer a:hover, footer a:active{
+        color: rgba(226, 226, 226, 0.8);
+        background-color: #73eaffd2;
     }
 }

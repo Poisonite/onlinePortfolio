@@ -114,3 +114,20 @@ footer{
     float: left;
     clear: both;
 }
+article.content a:link, article.content a:visited{
+    display: block;
+    background-color: rgb(44, 216, 207);
+    padding: 8px;
+    border-radius: 25px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+}
+article.content a:hover, article.content a:active{
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(44, 216, 207, 0.8);
+}
