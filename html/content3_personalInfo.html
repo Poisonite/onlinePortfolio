@@ -20,9 +20,11 @@
         <header>
             <!--The nav at the top of the screen which displays as a navicon on mobile and as a horizontal list on desktop/tablet-->
             <nav class="horizontal" id="main">
-                <ul>
-                    <!--Navicon for mobile only-->
-                    <img id="navicon" src="../resources/images/navicons/navicon.png" alt="" />
+                <!--Navicon for mobile only-->
+                <!-- <img id="navicon" src="../resources/images/navicons/navicon.png" alt="" /> -->
+                <a id="navicon" href="#"><img src="../resources/images/navicons/navicon.png" alt="" /></a>
+                <!--Navigation List-->
+                <ul id="main">
                     <!--Home Page Navigation Option-->
                     <li class="mainItems" id="home">
                         <a href="../index.html">
@@ -68,21 +70,21 @@
         </header>
 
         <!--Main Page Content-->
-        <article class="content" id="box1">Early-Life-Here</article>
-        <article class="content" id="box2">Hobbies-Here</article>
-        <article class="content" id="box3">Favorite-Projects</article>
-        <article class="content" id="box4">Goals-And-Aspirations</article>
-        <article class="content" id="box5">Why-I-Want-To-Work</article>
-        <article class="content" id="box6">Why-I-Choose-Tech</article>
-        
+        <div class="articleContainer">
+            <article class="content" id="box1">Early-Life-Here</article>
+            <article class="content" id="box2">Hobbies-Here</article>
+            <article class="content" id="box3">Favorite-Projects</article>
+            <article class="content" id="box4">Goals-And-Aspirations</article>
+            <article class="content" id="box5">Why-I-Want-To-Work</article>
+            <article class="content" id="box6">Why-I-Choose-Tech</article>
+        </div>
+
         <!--Footer with char entity references for certin symbols-->
         <footer>
-            <cite>
-                &bull;<!--Bullet--> Zac Ingoglia
-                &mdash;<!--Big Dash--> Contact me at&#58;<!--Colon-->
-                <a href="tel:+6024322018">602-432-2018</a>
-                &mdash;<!--Big Dash--> or &mdash;<!--Big Dash--> <a href="mailto:zacace@ingoglia.com">zacace@ingoglia.com</a>
-            </cite>
+            <cite>Zac Ingoglia</cite> <br/>
+            Contact me at&#58;<!--Colon-->
+            <a href="tel:+6024322018">602-432-2018</a>
+            &mdash;<!--Big Dash--> or &mdash;<!--Big Dash--> <a href="mailto:zacace@ingoglia.com">zacace@ingoglia.com</a>
         </footer>
     </body>
 </html>

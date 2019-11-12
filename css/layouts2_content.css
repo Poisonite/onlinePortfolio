@@ -3,13 +3,10 @@
 ---------------------------All Devices-------------------------------
 -------------------------------------------------------------------*/
 /* NOTE: General Layout Styles */
-html{
+html, body{
     box-sizing: border-box;
     width: 100%;
-}
-body{
-    box-sizing: border-box;
-    width: 100%;
+    order: 1;
 }
 /* NOTE: General Nav Main Layout Styles */
 nav.horizontal#main ul{
@@ -29,18 +26,22 @@ nav.horizontal#main li a{
 }
 /* NOTE: Article Content Box Layout Styles */
 
-body, article.content{
+body, div.articleContainer article.content{
+    box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 430px;
+    flex: 1 1 640px;
 }
-article.content{
+div.articleContainer{
     box-sizing: border-box;
-    width: 80%;
-    /* height: 80%; */
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 640px;
+    align-content: space-around;
+    justify-content: space-evenly;
 }
-article.content h2, article.content h3, 
-article.content h4, article.content p{
+div.articleContainer article.content h2, div.articleContainer article.content h3, 
+div.articleContainer article.content h4, div.articleContainer article.content p{
     box-sizing: border-box;
     width: 100%;
 }
@@ -49,8 +50,82 @@ article.content h4, article.content p{
 ----------------------------Mobile Devices---------------------------
 -------------------------------------------------------------------*/
 
-
+@media only screen and (max-width: 480px){
+    /* NOTE: Hidden Styles */
+    p.jobDescription, nav.horizontal#main ul{
+        display: none;
+    }
+    /* NOTE: Nav Styles */
+    a#navicon{
+        display: block;
+    }
+    a#navicon img{
+        width: 75px;
+    }
+    a#navicon:hover+ul, nav.horizontal ul:hover{
+        display: block;
+     }
+    div.articleContainer{
+        padding-top: 0px;
+    }
+    /* NOTE: Article Styles */
+    h2.jobTitle{
+        font-size: 1.6em;
+    }
+    h3.companyName{
+        font-size: 1.1em;
+    }
+    h4.timeFrame{
+        font-size: 0.8em;
+    }
+    h5.viewMore{
+        display: block;
+        box-sizing: border-box;
+        font-size: 1.4em;
+        margin: 15px auto;
+        background-color: rgb(44, 216, 207);
+        padding: 8px;
+        border-radius: 25px;
+    }
+    h5.viewMore:hover+p, h5.viewMore p:hover{
+        display: block;
+    }
+    p.jobDescription{
+        margin: 0px;
+        margin-bottom: 15px;
+        overflow-y: visible;
+        height: auto;
+    }
+    /* NOTE: Footer Styles */
+    footer{
+        order: 100;
+        font-size: 1em;
+        max-height: 2.4em;
+    }
+    footer a{
+        text-decoration: none;
+        color: rgb(226, 226, 226);
+        background-color: #73eaff;
+        border-radius: 30px;
+        padding: 5px;
+    }
+}
 
 /*-------------------------------------------------------------------
 ------------------------Desktop/Tablet Devices-----------------------
 -------------------------------------------------------------------*/
+
+@media only screen and (min-width: 481px){
+    /* NOTE: Hidden Styles */
+    h5.viewMore, img#navicon, a img{
+        display: none;
+    }
+    /* NOTE: Footer Styles */
+    footer a{
+        text-decoration: none;
+        color: rgb(226, 226, 226);
+        background-color: #73eaff;
+        border-radius: 30px;
+        padding: 10px;
+    }
+}

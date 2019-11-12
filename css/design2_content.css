@@ -1,14 +1,16 @@
 @charset "utf8";
 /* NOTE: General Page Styles */
-html{
-    background-color: #1effff;
+html, body{
+    /* background-color: #1effff; */
+    background-color: rgba(20, 100, 165, 1);
+    height: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
 }
-body{
+/* body{
     background-color: rgba(20, 100, 165, 0.9);
-}
-article.content:nth-of-type(1n+0){
-    margin-top: 75px;
-}
+} */
 /* NOTE: Main Nav Styles */
 nav.horizontal#main ul{
     padding: 0px 4px;
@@ -28,7 +30,6 @@ nav.horizontal#main li:last-of-type{
 }
 nav.horizontal#main li a{
     text-decoration: none;
-    font-size: 1.4em;
 }
 nav.horizontal#main li a:link, nav.horizontal#main li a:visited{
     color: rgba(0, 0, 0, 0.9);
@@ -44,14 +45,72 @@ nav.horizontal#main li:hover, nav.horizontal#main li:active{
     border-bottom-color: #119ab3;
 }
 /* NOTE: Article Content Box Styles */
-article.content{
+div.articleContainer article.content{
     background-color: rgba(15, 61, 99, 0.9);
     border-radius: 50px 50px;
     margin: 15px 15px;
     padding: 10px 10px;
+    max-width: 640px;
+    /* left: 50%; */
+    /* transform: translateX(50%); */
 }
-article.content h2, article.content h3, 
-article.content h4, article.content p{
-    margin: 15px 15px;
+div.articleContainer article.content h2, div.articleContainer article.content h3, 
+div.articleContainer article.content h4, div.articleContainer article.content p{
+    margin-left: 15px;
+    margin-right: 15px;
     color: rgb(194, 194, 194);
+}
+h2.jobTitle{
+    font-size: 2.6em;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+h3.companyName, h3.companyName em{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2em;
+    text-align: left;
+    color: rgb(134, 134, 134);
+}
+
+div.articleContainer article.content h4.timeFrame{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    text-align: left;
+    color: #39bddf;
+}
+
+p.jobDescription{
+    margin: 0px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    height: 160px;
+}
+div.articleContainer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* NOTE: Footer Styles */
+footer{
+    order: 100;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: #2ac8e4;
+    max-height: 3.2em;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    float: left;
+    clear: both;
 }
