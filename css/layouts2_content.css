@@ -125,15 +125,19 @@ div.articleContainer article.content h4, div.articleContainer article.content p{
         display: none;
     }
     /* NOTE: Footer Styles */
-    footer a:link, footer a:active{
+    footer a:link, footer a:visited{
         text-decoration: none;
         color: rgb(226, 226, 226);
-        background-color: #73eaff;
+        /* background-color: #73eaff; */
         border-radius: 30px;
-        padding: 10px;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
+        border-bottom-color: #ccd8c9;
+        /* padding: 10px; */
+        padding: 10px 10px 5px 10px;
     }
     footer a:hover, footer a:active{
         color: rgba(226, 226, 226, 0.8);
-        background-color: #73eaffd2;
+        /* background-color: #73eaffd2; */
     }
 }

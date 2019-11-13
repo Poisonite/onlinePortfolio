@@ -1,32 +1,30 @@
 @charset "utf8";
 /* NOTE: General Page Styles */
 html, body{
-    /* background-color: #1effff; */
-    background-color: rgba(20, 100, 165, 1);
+    background-color: #baf2bb;
     height: 100%;
+    width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
     box-sizing: border-box;
+    order: 1;
 }
-/* body{
-    background-color: rgba(20, 100, 165, 0.9);
-} */
 /* NOTE: Main Nav Styles */
 nav.horizontal#main ul{
     padding: 0px 4px;
     margin: 0px;
-    background-color: #1fb6d1;
+    background-color: #e5f9e0;
 }
 nav.horizontal#main li{
     padding: 5px 0px;
     border-right-style: solid;
     border-right-width: 2px;
-    border-right-color: #119ab3;
+    border-right-color: #ccd8c9;
 }
 nav.horizontal#main li:last-of-type{
     border-right-style: solid;
     border-right-width: 0px;
-    border-right-color: #1fb6d1;
+    border-right-color: #ccd8c9;
 }
 nav.horizontal#main li a{
     text-decoration: none;
@@ -42,17 +40,15 @@ nav.horizontal#main li a:hover, nav.horizontal#main li a:active{
 nav.horizontal#main li:hover, nav.horizontal#main li:active{
     border-bottom-style: solid;
     border-bottom-width: 6px;
-    border-bottom-color: #119ab3;
+    border-bottom-color: #ccd8c9;
 }
 /* NOTE: Article Content Box Styles */
 div.articleContainer article.content{
-    background-color: rgba(15, 61, 99, 0.9);
+    background-color: #5f5449;
     border-radius: 50px 50px;
     margin: 15px 15px;
     padding: 10px 10px;
     max-width: 640px;
-    /* left: 50%; */
-    /* transform: translateX(50%); */
 }
 div.articleContainer article.content h2, div.articleContainer article.content h3, 
 div.articleContainer article.content h4, div.articleContainer article.content p{
@@ -73,7 +69,6 @@ h3.companyName, h3.companyName em{
     text-align: left;
     color: rgb(134, 134, 134);
 }
-
 div.articleContainer article.content h4.timeFrame{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -81,7 +76,6 @@ div.articleContainer article.content h4.timeFrame{
     text-align: left;
     color: #39bddf;
 }
-
 p.jobDescription{
     margin: 0px;
     margin-bottom: 15px;
@@ -96,14 +90,13 @@ div.articleContainer{
 ::-webkit-scrollbar{
     display: none;
 }
-
 /* NOTE: Footer Styles */
 footer{
     order: 100;
     width: 100%;
     text-align: center;
     font-size: 1.6em;
-    background-color: #2ac8e4;
+    background-color: #6ad5cb;
     max-height: 3.2em;
     vertical-align: middle;
     text-decoration: none;
@@ -114,9 +107,10 @@ footer{
     float: left;
     clear: both;
 }
+/* NOTE: References Contact Button */
 article.content a:link, article.content a:visited{
     display: block;
-    background-color: rgb(44, 216, 207);
+    background-color: #81968f;
     padding: 8px;
     border-radius: 25px;
     width: fit-content;
