@@ -27,6 +27,7 @@ nav.horizontal#main li:last-of-type{
     border-right-color: #ccd8c9;
 }
 nav.horizontal#main li a{
+    box-sizing: border-box;
     text-decoration: none;
 }
 nav.horizontal#main li a:link, nav.horizontal#main li a:visited{
@@ -36,11 +37,6 @@ nav.horizontal#main li a:link, nav.horizontal#main li a:visited{
 nav.horizontal#main li a:hover, nav.horizontal#main li a:active{
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.6em;
-}
-nav.horizontal#main li:hover, nav.horizontal#main li:active{
-    border-bottom-style: solid;
-    border-bottom-width: 6px;
-    border-bottom-color: #ccd8c9;
 }
 /* NOTE: Article Content Box Styles */
 div.articleContainer article.content{
@@ -96,7 +92,7 @@ footer{
     width: 100%;
     text-align: center;
     font-size: 1.6em;
-    background-color: #6ad5cb;
+    background-color: #5f5449;
     max-height: 3.2em;
     vertical-align: middle;
     text-decoration: none;
@@ -123,5 +119,6 @@ article.content a:link, article.content a:visited{
 }
 article.content a:hover, article.content a:active{
     color: rgba(0, 0, 0, 0.8);
-    background-color: rgba(44, 216, 207, 0.8);
+    /* background-color: rgba(44, 216, 207, 0.8); */
+    background-color: #AFD0BF;
 }
