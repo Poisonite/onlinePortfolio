@@ -2,55 +2,52 @@
 /* NOTE: General Page Styles */
 html, body{
     background-color: #baf2bb;
-    height: 100%;
-    width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    box-sizing: border-box;
-    order: 1;
 }
+
 /* NOTE: Main Nav Styles */
 nav.horizontal#main ul{
+    background-color: #e5f9e0;
     padding: 0px 4px;
     margin: 0px;
-    background-color: #e5f9e0;
 }
 nav.horizontal#main li{
+    border-right: 2px solid #ccd8c9;
     padding: 5px 0px;
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-right-color: #ccd8c9;
 }
 nav.horizontal#main li:last-of-type{
-    border-right-style: solid;
     border-right-width: 0px;
-    border-right-color: #ccd8c9;
 }
 nav.horizontal#main li a{
-    box-sizing: border-box;
+    text-align: center;
     text-decoration: none;
 }
-nav.horizontal#main li a:link, nav.horizontal#main li a:visited{
+nav.horizontal#main li a:link, 
+nav.horizontal#main li a:visited{
     color: rgba(0, 0, 0, 0.9);
     font-size: 1.4em;
 }
-nav.horizontal#main li a:hover, nav.horizontal#main li a:active{
+nav.horizontal#main li a:hover, 
+nav.horizontal#main li a:active{
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.6em;
 }
+
 /* NOTE: Article Content Box Styles */
-div.articleContainer article.content{
+article.content{
     background-color: #5f5449;
     border-radius: 50px 50px;
-    margin: 15px 15px;
     padding: 10px 10px;
-    max-width: 640px;
+    margin: 15px 15px;
 }
-div.articleContainer article.content h2, div.articleContainer article.content h3, 
-div.articleContainer article.content h4, div.articleContainer article.content p{
+div.articleContainer article.content h2, 
+div.articleContainer article.content h3, 
+div.articleContainer article.content h4, 
+div.articleContainer article.content p{
+    color: rgb(194, 194, 194);
     margin-left: 15px;
     margin-right: 15px;
-    color: rgb(194, 194, 194);
 }
 h2.jobTitle{
     font-size: 2.6em;
@@ -59,66 +56,54 @@ h2.jobTitle{
     margin-bottom: 0px;
 }
 h3.companyName, h3.companyName em{
-    margin-top: 0px;
-    margin-bottom: 0px;
+    color: rgb(134, 134, 134);
     font-size: 1.2em;
     text-align: left;
-    color: rgb(134, 134, 134);
-}
-div.articleContainer article.content h4.timeFrame{
     margin-top: 0px;
     margin-bottom: 0px;
+}
+div.articleContainer article.content h4.timeFrame{
+    color: #39bddf;
     font-size: 1em;
     text-align: left;
-    color: #39bddf;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 p.jobDescription{
     margin: 0px;
     margin-bottom: 15px;
-    overflow-y: auto;
-    height: 160px;
 }
 div.articleContainer{
+    padding-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px;
-}
-::-webkit-scrollbar{
-    display: none;
-}
-/* NOTE: Footer Styles */
-footer{
-    order: 100;
-    width: 100%;
-    text-align: center;
-    font-size: 1.6em;
-    background-color: #5f5449;
-    max-height: 3.2em;
-    vertical-align: middle;
-    text-decoration: none;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    color: white;
-    text-shadow: 3px 3px 10px black;
-    float: left;
-    clear: both;
 }
 /* NOTE: References Contact Button */
 article.content a:link, article.content a:visited{
-    display: block;
     background-color: #81968f;
-    padding: 8px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
     border-radius: 25px;
-    width: fit-content;
+    padding: 8px;
     margin-left: auto;
     margin-right: auto;
-    text-decoration: none;
-    font-size: 1em;
-    color: black;
-    text-align: center;
 }
 article.content a:hover, article.content a:active{
-    color: rgba(0, 0, 0, 0.8);
-    /* background-color: rgba(44, 216, 207, 0.8); */
     background-color: #AFD0BF;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* NOTE: Footer Styles */
+footer{
+    background-color: #5f5449;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 3px 3px 10px black;
+    vertical-align: middle;
+    font-size: 1.6em;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
