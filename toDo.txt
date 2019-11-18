@@ -1,0 +1,9 @@
+Write flushed out article boiler for the Home page
+
+More detailed boiler formula for Skills and About Me pages (content1 and content3)
+
+Check mobile styles for home and content and make sure everything works to at least a MVP (minium viable product) state
+
+
+Complete (from list only):
+    Clean up content styles (sort between files and remove useless code)
