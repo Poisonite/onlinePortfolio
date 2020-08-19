@@ -1,6 +1,6 @@
 <header class="header">
   <mat-toolbar color="primary">
-    <h1 class="mat-h1">Zac Ingoglia</h1>
+    <h1 class="mat-h1">{{ title }}</h1>
   </mat-toolbar>
 </header>
 <mat-drawer-container class="nav-container" autosize>
@@ -16,17 +16,38 @@
       <mat-icon>close</mat-icon>
     </button>
     <br />
-    <a mat-button routerLink="/home" (click)="drawer.toggle()">Home</a>
+    <a
+      mat-button
+      routerLink="/home"
+      (click)="drawer.toggle(); titleUpdate('home')"
+      >Home</a
+    >
     <br />
-    <a mat-button routerLink="/skills" (click)="drawer.toggle()"
+    <a
+      mat-button
+      routerLink="/skills"
+      (click)="drawer.toggle(); titleUpdate('skills')"
       >Skills/Abilities</a
     >
     <br />
-    <a mat-button routerLink="/resume" (click)="drawer.toggle()">Resume</a>
+    <a
+      mat-button
+      routerLink="/resume"
+      (click)="drawer.toggle(); titleUpdate('resume')"
+      >Resume</a
+    >
     <br />
-    <a mat-button routerLink="/about" (click)="drawer.toggle()">About Me</a>
+    <a
+      mat-button
+      routerLink="/about"
+      (click)="drawer.toggle(); titleUpdate('about')"
+      >About Me</a
+    >
     <br />
-    <a mat-button routerLink="/references" (click)="drawer.toggle()"
+    <a
+      mat-button
+      routerLink="/references"
+      (click)="drawer.toggle(); titleUpdate('references')"
       >References</a
     >
     <br />
