@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "zac-ingoglia-com": {
+      "hosting": {
+        "zacIngogliaPortfolio": [
+          "zac-ingoglia-com"
+        ]
+      }
+    }
+  }
+}

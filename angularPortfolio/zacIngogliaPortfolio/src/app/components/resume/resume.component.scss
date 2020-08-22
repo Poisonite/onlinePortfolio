@@ -1,6 +1,6 @@
 // Imports the material theme module and the settings for the theme
-@import "~@angular/material/theming";
-@import "../../../theme.scss";
+// @import "~@angular/material/theming";
+// @import "../../../theme.scss";
 
 // Set flexbox styling on the cards and their overall container
 .flex-container {
@@ -23,7 +23,7 @@
   text-align: justify;
 }
 
-// Recolor  the date text
-.timeFrame {
-  color: mat-color($zac-ingoglia-accent);
-}
+// // Recolor  the date text
+// .timeFrame {
+//   color: mat-color($zac-ingoglia-accent);
+// }
