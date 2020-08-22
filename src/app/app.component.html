@@ -1,0 +1,81 @@
+<header class="header">
+  <mat-toolbar color="primary">
+    <h1 class="mat-h1">{{ title }}</h1>
+  </mat-toolbar>
+</header>
+<mat-drawer-container class="nav-container" autosize>
+  <mat-drawer #drawer class="nav-sidenav" mode="side">
+    <!-- Mobile Nav Closer -->
+    <button
+      type="button"
+      mat-button
+      color="accent"
+      class="navIcon mobilecloser"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <br />
+    <a
+      mat-button
+      routerLink="/home"
+      (click)="drawer.toggle(); titleUpdate('home')"
+      >Home</a
+    >
+    <br />
+    <a
+      mat-button
+      routerLink="/skills"
+      (click)="drawer.toggle(); titleUpdate('skills')"
+      >Skills/Abilities</a
+    >
+    <br />
+    <a
+      mat-button
+      routerLink="/resume"
+      (click)="drawer.toggle(); titleUpdate('resume')"
+      >Resume</a
+    >
+    <br />
+    <a
+      mat-button
+      routerLink="/about"
+      (click)="drawer.toggle(); titleUpdate('about')"
+      >About Me</a
+    >
+    <br />
+    <a
+      mat-button
+      routerLink="/references"
+      (click)="drawer.toggle(); titleUpdate('references')"
+      >References</a
+    >
+    <br />
+  </mat-drawer>
+</mat-drawer-container>
+<!-- Desktop Nav Toggle -->
+<div *ngIf="!drawer.opened; then opened; else closed"></div>
+
+<!-- Active component is displayed here -->
+<router-outlet class="content"></router-outlet>
+
+<div class="body">
+  <!-- Ensures that either the open or closed button shows on desktop screens based on whether the nav is open -->
+  <ng-template #opened>
+    <button type="button" mat-button class="navIcon" (click)="drawer.toggle()">
+      <mat-icon>reorder</mat-icon>
+    </button>
+  </ng-template>
+
+  <ng-template #closed>
+    <button
+      type="button"
+      mat-button
+      color="accent"
+      class="navIcon desktopCloser"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </ng-template>
+</div>

@@ -1,0 +1,27 @@
+// Set flexbox styling on the cards and their overall container
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-card-item {
+  margin: 1% 1.4% 1% 1.4%;
+  flex-grow: 1;
+}
+
+// Center overall card content
+.mainContent {
+  text-align: center;
+}
+
+// Center the main text content of the cards
+.cardBodyText {
+  text-align: justify;
+}
+
+// Fix button margins
+a,
+button {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}

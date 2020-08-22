@@ -1,0 +1,52 @@
+header h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: larger;
+}
+header {
+  position: sticky;
+}
+
+.nav-container {
+  height: 95%;
+  float: left;
+}
+
+.nav-sidenav {
+  padding: 20px;
+  width: max-content;
+  float: left;
+  border-width: 2px;
+  border-color: #4c5a49;
+  border-radius: 0px 0px 15px 0px;
+  height: 100%;
+}
+
+.navIcon {
+  margin-top: 15px;
+}
+
+// Desktop only styles
+@media only screen and (min-width: 651px) {
+  .mobilecloser {
+    display: none;
+  }
+}
+
+// Mobile Styles
+@media only screen and (max-width: 650px) {
+  .mobileCloser {
+    display: block;
+  }
+
+  .nav-sidenav {
+    width: 100vw;
+  }
+
+  .desktopCloser {
+    display: none;
+  }
+  a {
+    font-size: 1.8em;
+  }
+}
