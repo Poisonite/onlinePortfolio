@@ -1,3 +1,32 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="ion-align-items-center ion-text-center">
+      <ion-title>
+        <ion-text color="secondary" class="ion-text-center">
+          <h2>Zac Ingoglia</h2>
+        </ion-text>
+      </ion-title>
+
+      <!-- Nav Buttons -->
+      <ion-button [routerLink]="'/home'" fill="clear" shape="square">
+        Home
+      </ion-button>
+      <ion-button [routerLink]="'/skills'" fill="clear" shape="square">
+        Skills &amp; Abilities
+      </ion-button>
+      <ion-button [routerLink]="'/resume'" fill="clear" shape="square">
+        Resume
+      </ion-button>
+      <ion-button [routerLink]="'/about'" fill="clear" shape="square">
+        About Me
+      </ion-button>
+      <ion-button [routerLink]="'/contact'" fill="clear" shape="square">
+        Contact
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-text-center">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 </ion-app>
