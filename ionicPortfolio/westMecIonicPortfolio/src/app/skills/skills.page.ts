@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.page.scss'],
 })
 export class SkillsPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  openUrl(url: string) {
+    window.open(url, '_blank');
   }
 
+  ngOnInit() {}
 }
