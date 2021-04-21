@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +14,71 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
+  constructor(
+    public formBuilder: FormBuilder,
+    // Controllers and routers
+    private alertController: AlertController,
+    private router: Router
+  ) {}
+  contactForm: FormGroup;
+  message = {
+    color: 'danger',
+    length: 0,
+  };
 
-  constructor() { }
-
-  ngOnInit() {
+  async msgChange(event) {
+    this.message.length = event.detail.value.length;
+    if (this.message.length < 15) {
+      this.message.color = 'danger';
+    }
+    if (this.message.length >= 15) {
+      this.message.color = 'sucuess';
+    }
   }
 
+  async failedAlert() {
+    const alert = await this.alertController.create({
+      header: 'All required fields were not filled out',
+      message: 'Please fill out all fields!',
+      buttons: ['Ok'],
+    });
+
+    await alert.present();
+  }
+
+  async successAlert() {
+    const alert = await this.alertController.create({
+      header: 'Message Saved!',
+      message: "We'll be in touch shortly!",
+      buttons: [
+        {
+          text: 'Nice!',
+          handler: () => {
+            this.router.navigate(['/home']);
+            location.reload();
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+  }
+
+  ngOnInit() {
+    // Define reactive form structure
+    this.contactForm = this.formBuilder.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      phone: new FormControl('', [
+        Validators.required,
+        Validators.pattern(
+          `^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$`
+        ),
+      ]),
+      subject: new FormControl('', [Validators.required]),
+      message: new FormControl('', [
+        Validators.required,
+        Validators.minLength(15),
+      ]),
+    });
+  }
 }
