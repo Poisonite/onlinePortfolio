@@ -36,6 +36,32 @@ export class ContactPage implements OnInit {
     }
   }
 
+  // Submits the form to the database after completing data validation
+  async contactSubmit() {
+    // Makes sure that the "valid" property on the form is set to "VALID",
+    // if it's not (meaning a required field was not filled in), it alerts the user and doesn't add the doc
+    if (this.contactForm.status === 'VALID') {
+      const formData = {
+        timeStamp: Date.now(),
+        contact: this.contactForm.controls.email.value,
+        msgSubject: this.contactForm.controls.subject.value,
+        msgBody: this.contactForm.controls.message.value,
+      };
+      console.log(
+        'In a production enviroment this info will be sent to the database!',
+        formData
+      );
+      console.info('Message was saved!');
+      this.successAlert();
+      return;
+    } else {
+      // alerts the user when not all the form fields are filled in
+      console.error('All required fields were not filled out');
+      this.failedAlert();
+      return;
+    }
+  }
+
   async failedAlert() {
     const alert = await this.alertController.create({
       header: 'All required fields were not filled out',
@@ -55,7 +81,6 @@ export class ContactPage implements OnInit {
           text: 'Nice!',
           handler: () => {
             this.router.navigate(['/home']);
-            location.reload();
           },
         },
       ],
@@ -68,12 +93,6 @@ export class ContactPage implements OnInit {
     // Define reactive form structure
     this.contactForm = this.formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [
-        Validators.required,
-        Validators.pattern(
-          `^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$`
-        ),
-      ]),
       subject: new FormControl('', [Validators.required]),
       message: new FormControl('', [
         Validators.required,
