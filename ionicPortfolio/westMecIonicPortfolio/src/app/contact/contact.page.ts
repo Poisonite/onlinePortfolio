@@ -41,6 +41,7 @@ export class ContactPage implements OnInit {
     // Makes sure that the "valid" property on the form is set to "VALID",
     // if it's not (meaning a required field was not filled in), it alerts the user and doesn't add the doc
     if (this.contactForm.status === 'VALID') {
+      // Submits the data to the database
       const formData = {
         timeStamp: Date.now(),
         contact: this.contactForm.controls.email.value,
@@ -51,6 +52,10 @@ export class ContactPage implements OnInit {
         'In a production enviroment this info will be sent to the database!',
         formData
       );
+      // Reset and clear the form
+      this.contactForm.reset();
+      this.contactForm.markAsPristine();
+      this.contactForm.markAsUntouched();
       console.info('Message was saved!');
       this.successAlert();
       return;
