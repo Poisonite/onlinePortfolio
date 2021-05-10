@@ -12,5 +12,12 @@ export class SkillsPage implements OnInit {
     window.open(url, '_blank');
   }
 
+  hoverCursor(callerElem) {
+    callerElem.style.cursor = 'pointer';
+  }
+  resetCursor(callerElem) {
+    callerElem.style.cursor = 'auto';
+  }
+
   ngOnInit() {}
 }
