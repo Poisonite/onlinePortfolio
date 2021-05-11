@@ -1,0 +1,7 @@
+{
+  "name": "westMecIonicPortfolio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

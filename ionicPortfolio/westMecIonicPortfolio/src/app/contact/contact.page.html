@@ -1,0 +1,65 @@
+<ion-content>
+  <ion-text color="primary">
+    <h1>Get In Touch!</h1>
+  </ion-text>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <ion-card>
+          <ion-card-header></ion-card-header>
+
+          <ion-card-content>
+            <form [formGroup]="contactForm" (ngSubmit)="contactSubmit()">
+              <ion-item>
+                <ion-label position="floating">Contact E-Mail</ion-label>
+                <ion-input
+                  required
+                  formControlName="email"
+                  type="email"
+                ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Subject</ion-label>
+                <ion-input
+                  required
+                  formControlName="subject"
+                  type="text"
+                ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Message</ion-label>
+                <ion-textarea
+                  formControlName="message"
+                  placeholder="Enter your message here..."
+                  (ionChange)="msgChange($event)"
+                ></ion-textarea>
+                <ion-text
+                  no-lines
+                  *ngIf="message.length > 0"
+                  [color]="message.color"
+                  id="msgLength"
+                >
+                  {{message.length}}
+                </ion-text>
+              </ion-item>
+
+              <ion-button
+                block
+                fill="outline"
+                shape="round"
+                color="primary"
+                type="submit"
+                [disabled]="contactForm.invalid"
+              >
+                Send!
+              </ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
